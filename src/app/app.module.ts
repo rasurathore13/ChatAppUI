@@ -24,8 +24,8 @@ const protectedResourceMap = new Map([
       auth: {
           clientId: "fd492486-1576-4412-b3c1-f1935a3ce7fe",
           authority: "https://login.microsoftonline.com/e260fb4d-d711-45c9-8586-c3ddc7b9351c/",
-          redirectUri: "https://rathore-chatappui.azurewebsites.net",
-          postLogoutRedirectUri: "https://rathore-chatappui.azurewebsites.net",
+          redirectUri: "https://4200-rasurathore13-chatappui-h471aglpa0g.ws-us110.gitpod.io/",
+          postLogoutRedirectUri: "https://4200-rasurathore13-chatappui-h471aglpa0g.ws-us110.gitpod.io/",
           navigateToLoginRequestUrl: true
       },
       cache: {
