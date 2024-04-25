@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MsalBroadcastService, MsalService } from '@azure/msal-angular';
+import { PublicClientApplication } from '@azure/msal-browser';
 
 @Component({
   selector: 'app-root',
@@ -29,6 +30,13 @@ export class AppComponent implements OnInit {
 
   setIsAuthenticated() {
     this.authenticated = this.msalService.instance.getAllAccounts().length > 0;
+    this.msalService.instance.getActiveAccount()
+    if(this.authenticated) {
+      this.msalService.acquireTokenSilent({
+        scopes: ["User.Read"],
+        account: this.msalService.instance.getAllAccounts()[0]
+    }).subscribe((response: any) => {console.log(response)});
+    }
   }
 
 }
