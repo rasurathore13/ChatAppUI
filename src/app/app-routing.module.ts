@@ -4,11 +4,6 @@ import { AppComponent } from './app.component';
 import { MsalGuard } from '@azure/msal-angular';
 
 const routes: Routes = [
-  {
-    path: "",
-    component: AppComponent,
-    canActivate: [MsalGuard],
-  },
 ];
 
 @NgModule({
