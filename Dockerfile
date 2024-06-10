@@ -14,6 +14,8 @@ FROM nginx:latest
 
 COPY --from=buildstage /app/dist/chat-app-ui/browser /usr/share/nginx/html
 
-EXPOSE 80
+COPY nginx.conf /etc/nginx/nginx.conf
+
+EXPOSE 4200
 
 CMD ["nginx", "-g", "daemon off;"]
